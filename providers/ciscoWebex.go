@@ -1,11 +1,8 @@
 package providers
 
-const (
-	CiscoWebex Provider = "ciscoWebex"
-)
+const CiscoWebex Provider = "ciscoWebex"
 
 func init() {
-
 	SetInfo(CiscoWebex, ProviderInfo{
 		DisplayName: "Cisco Webex",
 		AuthType:    Oauth2,
