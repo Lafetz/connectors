@@ -1,4 +1,4 @@
-package ciscoWebex
+package ciscowebex
 
 import (
 	"github.com/amp-labs/connectors/common"
