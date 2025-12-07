@@ -41,7 +41,7 @@ func TestDelete(t *testing.T) {
 			Server: mockserver.Conditional{
 				Setup: mockserver.ContentJSON(),
 				If: mockcond.And{
-					mockcond.Path("/v1/people/Y2lzY29zcGFyazovL3VzL1BFT1BMRS9hZWRiZm"),
+					mockcond.Path("/v1/people/Y2lzY29zcGFyazovL3VzL1BFT1B"),
 					mockcond.MethodDELETE(),
 				},
 				Then: mockserver.Response(http.StatusNoContent),
