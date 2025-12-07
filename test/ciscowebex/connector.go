@@ -6,7 +6,7 @@ import (
 	"github.com/amp-labs/connectors/common"
 	"github.com/amp-labs/connectors/common/scanning/credscanning"
 	"github.com/amp-labs/connectors/providers"
-	ciscowebex "github.com/amp-labs/connectors/providers/ciscoWebex"
+	"github.com/amp-labs/connectors/providers/ciscowebex"
 	"github.com/amp-labs/connectors/test/utils"
 	"golang.org/x/oauth2"
 )
@@ -14,6 +14,7 @@ import (
 func GetCiscoWebexConnector(ctx context.Context) *ciscowebex.Connector {
 	filePath := credscanning.LoadPath(providers.CiscoWebex)
 	reader := utils.MustCreateProvCredJSON(filePath, true)
+
 	conn, err := ciscowebex.NewConnector(
 		common.ConnectorParams{
 			AuthenticatedClient: utils.NewOauth2Client(ctx, reader, getConfig),
@@ -22,6 +23,7 @@ func GetCiscoWebexConnector(ctx context.Context) *ciscowebex.Connector {
 	if err != nil {
 		utils.Fail("error creating connector", "error", err)
 	}
+
 	return conn
 }
 

@@ -1,0 +1,17 @@
+{
+    "notFoundIds": null,
+    "items": [
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9iMTQzNmI1OS02MDExLTQ2OTEtODBjZC0xN2Y0NGRhODVmNTk",
+            "emails": [
+                "testuser@example.com"
+            ],
+            "displayName": "testuser",
+            "nickName": "testuser",
+            "firstName": "test",
+            "lastName": "user",
+            "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9iMmYzYzMwNC1kYTI1LTQxZTMtOWY4NC0yOGM1NGEyZmMyZjQ",
+            "type": "person"
+        }
+    ]
+}
