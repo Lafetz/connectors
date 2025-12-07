@@ -16,7 +16,7 @@ func init() {
 			TokenMetadataFields: TokenMetadataFields{
 				ScopesField: "scope",
 			},
-			DocsURL: "https://developer.webex.com/calling/docs/api/guides/integrations-and-authorization",
+			DocsURL: "https://developer.webex.com/docs/run-an-oauth-integration",
 		},
 
 		// Media: Media assets (logos/icons) will be added in a follow-up PR
