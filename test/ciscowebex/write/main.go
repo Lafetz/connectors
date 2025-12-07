@@ -9,7 +9,7 @@ import (
 
 	"github.com/amp-labs/connectors"
 	"github.com/amp-labs/connectors/common"
-	"github.com/amp-labs/connectors/providers/ciscoWebex"
+	"github.com/amp-labs/connectors/providers/ciscowebex"
 	connTest "github.com/amp-labs/connectors/test/ciscowebex"
 	"github.com/amp-labs/connectors/test/utils"
 	"github.com/brianvoe/gofakeit/v6"
@@ -52,20 +52,17 @@ func main() {
 			"lastName":    "Person",
 		},
 	})
-	if updateRes != nil && updateRes.Success {
-		slog.Info("Update returned success, verifying with GET request")
-		verifyPerson(ctx, conn, createRes.RecordId, updatedEmail, "Example", "Person")
-	} else if err != nil {
-		slog.Warn("Update returned error, but checking if person was updated anyway", "error", err)
+
+	if err != nil {
+		slog.Warn("Update returned error, checking actual state with GET request", "error", err)
 		verifyPerson(ctx, conn, createRes.RecordId, updatedEmail, "Example", "Person")
 	} else {
-		slog.Warn("Update returned neither success nor error")
+		slog.Info("Update successful, using updateRes data", "recordId", updateRes.RecordId)
+		utils.DumpJSON(updateRes, os.Stdout)
 	}
-
-	utils.DumpJSON(updateRes, os.Stdout)
 }
 
-func verifyPerson(ctx context.Context, conn *ciscoWebex.Connector, recordID, expectedEmail, expectedFirstName, expectedLastName string) {
+func verifyPerson(ctx context.Context, conn *ciscowebex.Connector, recordID, expectedEmail, expectedFirstName, expectedLastName string) {
 
 	readRes, err := conn.Read(ctx, common.ReadParams{
 		ObjectName: "people",
@@ -101,14 +98,16 @@ func verifyPerson(ctx context.Context, conn *ciscoWebex.Connector, recordID, exp
 	firstName, ok := foundPerson.Fields["firstname"].(string)
 	if !ok {
 		slog.Warn("firstName field not found in verified person")
-	} else if firstName != expectedFirstName {
+	}
+	if firstName != expectedFirstName {
 		slog.Warn("firstName mismatch", "expected", expectedFirstName, "got", firstName)
 	}
 
 	lastName, ok := foundPerson.Fields["lastname"].(string)
 	if !ok {
 		slog.Warn("lastName field not found in verified person")
-	} else if lastName != expectedLastName {
+	}
+	if lastName != expectedLastName {
 		slog.Warn("lastName mismatch", "expected", expectedLastName, "got", lastName)
 	}
 

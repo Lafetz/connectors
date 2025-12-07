@@ -1,4 +1,4 @@
-package ciscoWebex
+package ciscowebex
 
 import (
 	"net/http"
@@ -12,6 +12,7 @@ import (
 	"github.com/amp-labs/connectors/test/utils/testutils"
 )
 
+// nolint:funlen,gocognit,cyclop
 func TestWrite(t *testing.T) {
 	t.Parallel()
 

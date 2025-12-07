@@ -1,4 +1,4 @@
-package ciscoWebex
+package ciscowebex
 
 import (
 	"bytes"
@@ -21,6 +21,7 @@ func (c *Connector) buildWriteRequest(ctx context.Context, params common.WritePa
 	method := http.MethodPost
 	if params.RecordId != "" {
 		method = http.MethodPut
+
 		url.AddPath(params.RecordId)
 	}
 
@@ -45,7 +46,6 @@ func (c *Connector) parseWriteResponse(
 ) (*common.WriteResult, error) {
 	body, ok := resp.Body()
 	if !ok {
-
 		return &common.WriteResult{
 			Success: true,
 		}, nil

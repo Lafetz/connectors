@@ -1,4 +1,4 @@
-package ciscoWebex
+package ciscowebex
 
 import (
 	"net/http"
@@ -11,6 +11,7 @@ import (
 	"github.com/amp-labs/connectors/test/utils/testroutines"
 )
 
+// nolint:funlen,gocognit,cyclop
 func TestDelete(t *testing.T) {
 	t.Parallel()
 
@@ -28,7 +29,7 @@ func TestDelete(t *testing.T) {
 		},
 		{
 			Name:   "Object name is not supported",
-			Input:  common.DeleteParams{ObjectName: "rooms", RecordId: "Y2lzY29zcGFyazovL3VzL1JPT00vYmJjZWIxYWQtNDNmMS00OTIwLWEyNmUtYTI4N2Y1YjUxOTFi"},
+			Input:  common.DeleteParams{ObjectName: "rooms", RecordId: "Y2lzY29zcGFyazovL3VzL1JPT00vY"},
 			Server: mockserver.Dummy(),
 			ExpectedErrs: []error{
 				common.ErrOperationNotSupportedForObject,
@@ -36,11 +37,11 @@ func TestDelete(t *testing.T) {
 		},
 		{
 			Name:  "Successful delete person",
-			Input: common.DeleteParams{ObjectName: "people", RecordId: "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9hZWRiZmVlYy1kZGI1LTRhNTItYjZhZS1lYzExMTVlZmZjZTg"},
+			Input: common.DeleteParams{ObjectName: "people", RecordId: "Y2lzY29zcGFyazovL3VzL1BFT1B"},
 			Server: mockserver.Conditional{
 				Setup: mockserver.ContentJSON(),
 				If: mockcond.And{
-					mockcond.Path("/v1/people/Y2lzY29zcGFyazovL3VzL1BFT1BMRS9hZWRiZmVlYy1kZGI1LTRhNTItYjZhZS1lYzExMTVlZmZjZTg"),
+					mockcond.Path("/v1/people/Y2lzY29zcGFyazovL3VzL1BFT1BMRS9hZWRiZm"),
 					mockcond.MethodDELETE(),
 				},
 				Then: mockserver.Response(http.StatusNoContent),

@@ -8,7 +8,7 @@ import (
 	"syscall"
 
 	"github.com/amp-labs/connectors/common"
-	"github.com/amp-labs/connectors/providers/ciscoWebex"
+	"github.com/amp-labs/connectors/providers/ciscowebex"
 	connTest "github.com/amp-labs/connectors/test/ciscowebex"
 	"github.com/amp-labs/connectors/test/utils"
 	"github.com/brianvoe/gofakeit/v6"
@@ -53,7 +53,7 @@ func main() {
 	slog.Info("Failed to delete non-existent person as expected")
 }
 
-func createPerson(ctx context.Context, conn *ciscoWebex.Connector, email string) *common.WriteResult {
+func createPerson(ctx context.Context, conn *ciscowebex.Connector, email string) *common.WriteResult {
 	res, err := conn.Write(ctx, common.WriteParams{
 		ObjectName: "people",
 		RecordData: map[string]any{
@@ -71,7 +71,7 @@ func createPerson(ctx context.Context, conn *ciscoWebex.Connector, email string)
 	return res
 }
 
-func deletePerson(ctx context.Context, conn *ciscoWebex.Connector, recordID string) *common.DeleteResult {
+func deletePerson(ctx context.Context, conn *ciscowebex.Connector, recordID string) *common.DeleteResult {
 	deleteRes, err := conn.Delete(ctx, common.DeleteParams{
 		ObjectName: "people",
 		RecordId:   recordID,

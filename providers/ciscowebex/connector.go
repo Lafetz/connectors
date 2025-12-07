@@ -1,4 +1,4 @@
-package ciscoWebex
+package ciscowebex
 
 import (
 	"github.com/amp-labs/connectors/common"
@@ -10,7 +10,7 @@ import (
 	"github.com/amp-labs/connectors/internal/components/schema"
 	"github.com/amp-labs/connectors/internal/components/writer"
 	"github.com/amp-labs/connectors/providers"
-	"github.com/amp-labs/connectors/providers/ciscoWebex/metadata"
+	"github.com/amp-labs/connectors/providers/ciscowebex/metadata"
 )
 
 const apiVersion = "v1"
