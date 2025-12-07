@@ -1,0 +1,23 @@
+{
+    "id": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9hZWRiZmVlYy1kZGI1LTRhNTItYjZhZS1lYzExMTVlZmZjZTg",
+    "emails": [
+        "exmple@example.com"
+    ],
+    "displayName": "Example Person",
+    "nickName": "Example",
+    "firstName": "Example",
+    "lastName": "Person",
+    "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9iMmYzYzMwNC1kYTI1LTQxZTMtOWY4NC0yOGM1NGEyZmMyZjQ",
+    "roles": [],
+    "licenses": [
+        "Y2lzY29zcGFyazovL3VzL0xJQ0VOU0UvYjJmM2MzMDQtZGEyNS00MWUzLTlmODQtMjhjNTRhMmZjMmY0OkZTU18xYjcyOGZmOS03ZGU4LTRjYjctOTU0MC0yOTMyMGI1YTQyY2I",
+        "Y2lzY29zcGFyazovL3VzL0xJQ0VOU0UvYjJmM2MzMDQtZGEyNS00MWUzLTlmODQtMjhjNTRhMmZjMmY0OkZNU185ZWNhNzgxNC0zMzEzLTQ2NGYtOTY0Mi0wMjM5ODc1YmM5Zjg",
+        "Y2lzY29zcGFyazovL3VzL0xJQ0VOU0UvYjJmM2MzMDQtZGEyNS00MWUzLTlmODQtMjhjNTRhMmZjMmY0OkZUQ19hMjQ3MzgyOC1hOTgwLTQ3MmYtODE5ZC02YjljY2UwOGU5MmI",
+        "Y2lzY29zcGFyazovL3VzL0xJQ0VOU0UvYjJmM2MzMDQtZGEyNS00MWUzLTlmODQtMjhjNTRhMmZjMmY0OkZUTV9mNWZkZTM1Zi00NzA0LTQ2MGEtODEwZi00YzVkMzUyNDFlNjk"
+    ],
+    "created": "2025-12-07T15:23:45.438Z",
+    "lastModified": "2025-12-07T15:23:45.438Z",
+    "invitePending": true,
+    "loginEnabled": true,
+    "type": "person"
+}
