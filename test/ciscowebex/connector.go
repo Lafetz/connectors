@@ -6,7 +6,8 @@ import (
 	"github.com/amp-labs/connectors/common"
 	"github.com/amp-labs/connectors/common/scanning/credscanning"
 	"github.com/amp-labs/connectors/providers"
-	ciscowebex "github.com/amp-labs/connectors/providers/ciscoWebex"
+	"github.com/amp-labs/connectors/providers/ciscowebex"
+
 	"github.com/amp-labs/connectors/test/utils"
 	"golang.org/x/oauth2"
 )
