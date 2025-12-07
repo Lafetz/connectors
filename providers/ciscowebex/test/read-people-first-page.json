@@ -1,0 +1,17 @@
+{
+    "notFoundIds": null,
+    "items": [
+        {
+            "id": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8xNzQ5MmVmNC1iMGFjLTRjMTYtYWRjNS02OTNkMjEyM2Q5MmI",
+            "emails": [
+                "admin@example.wbx.ai"
+            ],
+            "displayName": "admin@example.wbx.ai",
+            "nickName": "admin",
+            "firstName": "admin",
+            "lastName": "admin",
+            "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9iMmYzYzMwNC1kYTI1LTQxZTMtOWY4NC0yOGM1NGEyZmMyZjQ",
+            "type": "person"
+        }
+    ]
+}
