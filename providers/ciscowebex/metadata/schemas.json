@@ -7,64 +7,103 @@
                 "people": {
                     "displayName": "People",
                     "path": "/people",
+                    "responseKey": "items",
                     "docs": "https://developer.webex.com/docs/api/v1/people",
                     "fields": {
                         "id": {
-                            "displayName": "ID"
+                            "displayName": "ID",
+                            "valueType": "string",
+                            "providerType": "string"
                         },
                         "emails": {
-                            "displayName": "Emails"
+                            "displayName": "Emails",
+                            "valueType": "other",
+                            "providerType": "array"
                         },
                         "displayName": {
-                            "displayName": "Display Name"
+                            "displayName": "Display Name",
+                            "valueType": "string",
+                            "providerType": "string"
                         },
                         "nickName": {
-                            "displayName": "Nick Name"
+                            "displayName": "Nick Name",
+                            "valueType": "string",
+                            "providerType": "string"
                         },
                         "firstName": {
-                            "displayName": "First Name"
+                            "displayName": "First Name",
+                            "valueType": "string",
+                            "providerType": "string"
                         },
                         "lastName": {
-                            "displayName": "Last Name"
+                            "displayName": "Last Name",
+                            "valueType": "string",
+                            "providerType": "string"
                         },
                         "orgId": {
-                            "displayName": "Organization ID"
+                            "displayName": "Organization ID",
+                            "valueType": "string",
+                            "providerType": "string"
                         },
                         "roles": {
-                            "displayName": "Roles"
+                            "displayName": "Roles",
+                            "valueType": "other",
+                            "providerType": "array"
                         },
                         "licenses": {
-                            "displayName": "Licenses"
+                            "displayName": "Licenses",
+                            "valueType": "other",
+                            "providerType": "array"
                         },
                         "created": {
-                            "displayName": "Created"
+                            "displayName": "Created",
+                            "valueType": "datetime",
+                            "providerType": "string"
                         },
                         "lastModified": {
-                            "displayName": "Last Modified"
+                            "displayName": "Last Modified",
+                            "valueType": "datetime",
+                            "providerType": "string"
                         },
                         "lastActivity": {
-                            "displayName": "Last Activity"
+                            "displayName": "Last Activity",
+                            "valueType": "datetime",
+                            "providerType": "string"
                         },
                         "siteUrls": {
-                            "displayName": "Site URLs"
+                            "displayName": "Site URLs",
+                            "valueType": "other",
+                            "providerType": "array"
                         },
                         "sipAddresses": {
-                            "displayName": "SIP Addresses"
+                            "displayName": "SIP Addresses",
+                            "valueType": "other",
+                            "providerType": "array"
                         },
                         "status": {
-                            "displayName": "Status"
+                            "displayName": "Status",
+                            "valueType": "string",
+                            "providerType": "string"
                         },
                         "invitePending": {
-                            "displayName": "Invite Pending"
+                            "displayName": "Invite Pending",
+                            "valueType": "boolean",
+                            "providerType": "boolean"
                         },
                         "loginEnabled": {
-                            "displayName": "Login Enabled"
+                            "displayName": "Login Enabled",
+                            "valueType": "boolean",
+                            "providerType": "boolean"
                         },
                         "type": {
-                            "displayName": "Type"
+                            "displayName": "Type",
+                            "valueType": "string",
+                            "providerType": "string"
                         },
                         "phoneNumbers": {
-                            "displayName": "Phone Numbers"
+                            "displayName": "Phone Numbers",
+                            "valueType": "other",
+                            "providerType": "array"
                         }
                     }
                 }
